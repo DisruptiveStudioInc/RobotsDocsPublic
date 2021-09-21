@@ -213,6 +213,117 @@ Error response:
 }
 ```
 
+
+## Change Bot Status 
+
+POST /Bots/ChangeStatus
+
+Headers:
+```json
+{
+  "Content-Type": "application/json",
+  "BussinessCode": "xxx",
+  "UserCode": "xxx",
+  "UserId": 11111
+}
+```
+
+Body:
+```json
+{
+  "Bot": "xx" // Bot unique Code
+}
+```
+
+Successful response:
+```json
+{
+  "isError": false,
+  "data": "Bot status changed"
+}
+```
+Error response:
+```json
+{
+  "isError": true,
+  "Error": "An error occurred: description"
+}
+```
+
+## Get Bot Status 
+
+POST /Bots/Status
+
+Headers:
+```json
+{
+  "Content-Type": "application/json",
+  "BussinessCode": "xxx",
+  "UserCode": "xxx",
+  "UserId": 11111
+}
+```
+
+Body:
+```json
+{
+  "Bot": "xx" // Bot unique Code
+}
+```
+
+Successful response:
+```json
+{
+  "isError": false,
+  "Status": 1 // 1 = Active , 0 = Inactive
+}
+```
+Error response:
+```json
+{
+  "isError": true,
+  "Error": "An error occurred: description"
+}
+```
+
+## Save or change Api Keys 
+
+POST /Exchanges/Save
+
+Headers:
+```json
+{
+  "Content-Type": "application/json",
+  "BussinessCode": "xxx",
+  "UserCode": "xxx",
+  "UserId": 11111
+}
+```
+
+Body:
+```json
+{
+  "Bot": "xx", // Bot unique Code,
+  "Exchange": 1, //1 = Binance , 2 = Binance US
+  "ApiKey": "xxx",
+  "ApiSecret": "xxxx"
+}
+```
+
+Successful response:
+```json
+{
+  "isError": false
+}
+```
+Error response:
+```json
+{
+  "isError": true,
+  "Error": "An error occurred: description"
+}
+```
+
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
