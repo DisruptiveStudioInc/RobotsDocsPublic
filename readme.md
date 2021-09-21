@@ -324,6 +324,40 @@ Error response:
 }
 ```
 
+## Get user ops
+
+GET /Ops/All
+
+Headers:
+```json
+{
+  "Content-Type": "application/json",
+  "BussinessCode": "xxx",
+  "UserCode": "xxx",
+  "UserId": 11111
+}
+```
+
+Successful response:
+```json
+{
+  "isError": false,
+  "data": [
+    {".."},
+    {".."},
+    {".."},
+    ...
+  ]
+}
+```
+Error response:
+```json
+{
+  "isError": true,
+  "Error": "An error occurred: description"
+}
+```
+
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
