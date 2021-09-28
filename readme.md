@@ -358,6 +358,48 @@ Error response:
 }
 ```
 
+## Get Op Fechas
+
+POST /Ops/Fechas
+
+Headers:
+```json
+{
+  "Content-Type": "application/json",
+  "BussinessCode": "xxx",
+  "UserCode": "xxx",
+  "UserId": 11111
+}
+```
+
+Body:
+```json
+{
+  "OpId": 1,
+}
+
+```
+
+Successful response:
+```json
+{
+  "isError": false,
+  "data": {
+    Entrada: 1223344567890,
+    Salida: 1234567890,
+    Cancelada: 1234567890,
+    Ultima: 12334567890
+  } 
+}
+```
+Error response:
+```json
+{
+  "isError": true,
+  "Error": "An error occurred: description"
+}
+```
+
 ## Get Op Exchange
 
 POST /Ops/Exchange
@@ -385,6 +427,47 @@ Successful response:
 {
   "isError": false,
   "data": 1 // 1 = Binance; 2 = Binance US
+}
+```
+Error response:
+```json
+{
+  "isError": true,
+  "Error": "An error occurred: description"
+}
+```
+
+## Get Op Precios
+
+POST /Ops/Precios
+
+Headers:
+```json
+{
+  "Content-Type": "application/json",
+  "BussinessCode": "xxx",
+  "UserCode": "xxx",
+  "UserId": 11111
+}
+```
+
+Body:
+```json
+{
+  "OpId": 1,
+}
+
+```
+
+Successful response:
+```json
+{
+  "isError": false,
+  "data": {
+    Entrada: 0.11,
+    Salida: 0.212,
+    Stop: 0.09
+  } // 1 = Binance; 2 = Binance US
 }
 ```
 Error response:
