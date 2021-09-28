@@ -176,7 +176,7 @@ Successful response:
 ```json
 {
   "isError": false,
-  "Code": "xxx", // Bot Unique Identification Code
+  "data": "Se ha actualizado correctamente el bot"
 }
 ```
 Error response:
