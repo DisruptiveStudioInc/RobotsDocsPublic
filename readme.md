@@ -151,6 +151,42 @@ Error response:
 }
 ```
 
+## Update Bot Config
+POST /Bots/Update
+
+Headers:
+```json
+{
+  "Content-Type": "application/json",
+  "BussinessCode": "xxx",
+  "UserCode": "xxx",
+  "UserId": 11111
+}
+```
+Body:
+```json
+{
+  "Budget": 15,
+  "TransLimit": 100,
+  "Stop": 15,
+  "BotId": "sdsdsd"
+}
+```
+Successful response:
+```json
+{
+  "isError": false,
+  "Code": "xxx", // Bot Unique Identification Code
+}
+```
+Error response:
+```json
+{
+  "isError": true,
+  "Error": "An error occurred: description"
+}
+```
+
 ## Suspend Bot
 POST /Bots/Suspend
 
