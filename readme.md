@@ -358,6 +358,43 @@ Error response:
 }
 ```
 
+## Get Op Exchange
+
+POST /Ops/Exchange
+
+Headers:
+```json
+{
+  "Content-Type": "application/json",
+  "BussinessCode": "xxx",
+  "UserCode": "xxx",
+  "UserId": 11111
+}
+```
+
+Body:
+```json
+{
+  "OpId": 1,
+}
+
+```
+
+Successful response:
+```json
+{
+  "isError": false,
+  "data": 1 // 1 = Binance; 2 = Binance US
+}
+```
+Error response:
+```json
+{
+  "isError": true,
+  "Error": "An error occurred: description"
+}
+```
+
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
