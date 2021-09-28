@@ -467,7 +467,7 @@ Successful response:
     Entrada: 0.11,
     Salida: 0.212,
     Stop: 0.09
-  } // 1 = Binance; 2 = Binance US
+  }
 }
 ```
 Error response:
